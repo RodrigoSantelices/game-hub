@@ -18,7 +18,7 @@ interface Props {
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
   // Strange break, FIX REMINDER
-  if (error.length != 0) {
+  if (error) {
     return null;
   }
   if (isLoading) return <Spinner />;
