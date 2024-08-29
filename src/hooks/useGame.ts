@@ -1,15 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import APIClient from "../services/api-client";
+import { Game } from "../entities/Game";
 
 
-interface GameDetails{
- id: number;
- name: string;
- slug: string;
- description_raw: string;
-}
-
-const apiClient = new APIClient<GameDetails>('/games'); //Make interface here
+const apiClient = new APIClient<Game>('/games'); //Make interface here
 
 const useGame = (slug:string)=> useQuery({
         queryKey:['games', slug],
