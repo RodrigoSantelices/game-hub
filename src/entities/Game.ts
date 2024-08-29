@@ -1,6 +1,7 @@
 import { Genre } from "./Genre";
 import { Platform } from "./Platform";
 import { Publisher } from "./Publisher";
+import { Trailer } from "./Trailer";
 
 
 export interface Game {
@@ -14,4 +15,5 @@ export interface Game {
   description_raw:string;
   genres: Genre [];
   publishers: Publisher[];
+  trailers: Trailer[];
 }
