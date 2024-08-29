@@ -12,9 +12,9 @@ const GameCardContainer = ({ children, displayType }: Props) => {
       borderRadius={10}
       overflow="hidden"
       display={displayType}
-      transition="all .2s ease-in"
       _hover={{
         transform: "scale(1.025)",
+        transition: "transform .15s ease-in",
       }}
     >
       {children}
